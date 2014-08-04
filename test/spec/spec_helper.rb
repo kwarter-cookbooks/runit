@@ -4,8 +4,10 @@ require 'chef/run_context'
 require 'chef/resource'
 require 'chef/resource/service'
 require 'chef/provider/service/simple'
+require 'chef/event_dispatch/base'
+require 'chef/event_dispatch/dispatcher'
 
-$:.unshift(File.join(File.dirname(__FILE__), "..", "..", "libraries"))
+$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', '..', 'libraries'))
 require 'provider_runit_service'
 require 'resource_runit_service'
 

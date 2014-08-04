@@ -17,13 +17,4 @@
 # limitations under the License.
 #
 
-require 'chef/mixin/shell_out'
-
-module Helpers
-  module RunitTest
-    include MiniTest::Chef::Assertions
-    include MiniTest::Chef::Context
-    include MiniTest::Chef::Resources
-    include Chef::Mixin::ShellOut
-  end
-end
+include_recipe 'runit::default'
